@@ -168,7 +168,17 @@ function onStdAdd(eve) {
 
 }
 
+function onDeleteStdList(ele){
+    let deleteId = ele.closest('tr').id;
 
+    let getConfirmation = confirm(`Are you sure you want to delete data of this id ${deleteId}`)
+    if(getConfirmation){
+        let getIndex = stdArr.findIndex(e => e.stdId === deleteId)
+        stdArr.splice(getIndex, 1)
+
+        ele.closest('tr').remove()
+    }
+}
 
 
 
