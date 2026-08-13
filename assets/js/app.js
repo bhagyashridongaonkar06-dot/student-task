@@ -95,6 +95,7 @@ function onStdAdd(eve) {
         contact : contactControl.value,
         stdId : Date.now().toString()
     }
+    
 
     stdArr.push(newStd)
     stdForm.reset();
