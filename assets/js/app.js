@@ -125,6 +125,9 @@ function onDeleteStdList(ele){
 
         ele.closest('tr').remove()
     }
+    let allTr = document.querySelectorAll('#stdList tr')
+    allTr.forEach((e, i) => e.firstElementChild.innerHTML = i + 1)
+
 }
 
 
